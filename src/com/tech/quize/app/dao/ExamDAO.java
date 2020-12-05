@@ -25,6 +25,8 @@ public class ExamDAO {
     {
         Connection conn=DBConnection.getConnection();
         Statement st= conn.createStatement();
+        
+        
         ResultSet rs=st.executeQuery("select count(*) from exam");
         rs.next();
         int count=rs.getInt(1);
